@@ -1,13 +1,192 @@
 ﻿<!DOCTYPE html>
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ordreoverigt</title>
+    <link rel="icon" type="image/x-icon" href="SeafoodSales_Brandmark.ico">
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .topright {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("Bagground_Image.png");
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 90%;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <ul class="nav">
-        <li><a href="/Oversigt">Oversigt</a></li>
-    </ul>
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <img src="SeafoodSales_Logo_type.png" alt="Seafood" width="150" height="50" style="float:right">
+        <div id="myPlot" style="width:100%;max-width:700px"></div>
+
+        <h2>Order Overview</h2>
+        <script>
+            var xArray = ["Not Started", "Draft Approval Needed    ", "Draft Declined", "Approved", "Finished"];
+            var yArray = [1, 1, 1, 2, 1];
+
+            var layout = { title: "Order completion overview" };
+
+            var data = [{ labels: xArray, values: yArray, hole: .4, type: "pie" }];
+
+            Plotly.newPlot("myPlot", data, layout);
+
+            function myFunction() {
+                location.replace("OrderPage.html")
+            }
+
+            function myFunction1() {
+                location.replace("Order2.html")
+            }
+
+            function myFunction2() {
+                location.replace("Order3.html")
+            }
+
+            function myFunction3() {
+                location.replace("Order4.html")
+            }
+
+            function myFunction4() {
+                location.replace("Order5.html")
+            }
+
+            function myFunction5() {
+                location.replace("Order6.html")
+            }
+        </script>
+
+        <table>
+            <tr>
+                <th>Ordrenummer</th>
+                <th>Varebeskrivelse</th>
+                <th>Mængde</th>
+                <th>Kunde</th>
+                <th>Producent</th>
+                <th>Process</th>
+                <th>Noter</th>
+                <th>View</th>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>MSC Salmon Mince</td>
+                <td>24.000KG.</td>
+                <td>Menu</td>
+                <td>Yang Ming</td>
+                <td>Order made, needs documents</td>
+                <td>April is currntly making the drafts</td>
+                <td><button onclick="myFunction()">See Details</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Haddock Mince</td>
+                <td>20.000KG.</td>
+                <td>Rema 1000</td>
+                <td>Ming Mai</td>
+                <td>Draft awaits approval</td>
+                <td>Please check documents</td>
+                <td><button onclick="myFunction1()">See Details</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Salmon Bits & Pieces</td>
+                <td>10.000KG.</td>
+                <td>Aldi</td>
+                <td>Yang Ming</td>
+                <td>Drafts declined</td>
+                <td>Incorect Container number on Aminal Health Certificate</td>
+                <td><button onclick="myFunction2()">See Details</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ASC Salmon Mince</td>
+                <td>5.000KG.</td>
+                <td>Netto</td>
+                <td>Yang Ming</td>
+                <td>Draft Approved</td>
+                <td>Awaits final confirmation of departure from China</td>
+                <td><button onclick="myFunction3()">See Details</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>MSC Haddock Mince</td>
+                <td>40.000KG.</td>
+                <td>Lager - Padborg</td>
+                <td>Ming Mai</td>
+                <td>Shipment sent</td>
+                <td>Current ETA is 16-03-2023</td>
+                <td><button onclick="myFunction4()">See Details</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>MSC Pink Salmon Mince</td>
+                <td>25.000KG.</td>
+                <td>Lager - Bremerhaven</td>
+                <td>Ming Li</td>
+                <td>Shipment arrived</td>
+                <td>Container i currently being unpacked</td>
+                <td><button onclick="myFunction5()">See Details</button></td>
+            </tr>
+        </table>
 </body>
 </html>
