@@ -1,17 +1,206 @@
 ﻿<!DOCTYPE html>
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Order 1</title>
+    <link rel="icon" type="image/x-icon" href="SeafoodSales_Brandmark.ico">
+
+    <style>
+       * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("Bagground_Image.png");
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 25%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text1 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 25%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text2 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 15%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 25%;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="bg-image"></div>
     <script>
         function myFunctionGoBack() {
             location.replace("FrontPage.html")
         }
     </script>
-    <h1>Order 1</h1>
+
+    <table>
+        <tbody class="bg-text">
+            <tr>
+                <th>Company Name</th>
+                <th>Customer No.</th>
+                <th>VAT Registration No</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    </table>
+
+    <table>
+        <caption>Supplier Inoformation</caption>
+        <tbody class="bg-text1">
+            <tr>
+                <th>Company Name</th>
+                <th>Supplier No.</th>
+                <th>EU Aut No</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    </table>
+
+    <table>
+        <caption>Process</caption>
+        <tbody class="bg-text2">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+            </tr>
+    </table>
+
     <button onclick="myFunctionGoBack()">Go Back</button>
 </body>
 </html>
