@@ -9,38 +9,26 @@
     <link rel="icon" type="image/x-icon" href="SeafoodSales_Brandmark.ico">
 
     <style>
-       * {
-            box-sizing: border-box;
-        }
-
-        .row {
-            margin-left: -5px;
-            margin-right: -5px;
-        }
-
-        .column {
-            float: left;
-            width: 50%;
-            padding: 5px;
-        }
-
-        /* Clearfix (clear floats) */
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
         table {
+            font-family: arial, sans-serif;
             border-collapse: collapse;
-            border-spacing: 0;
             width: 100%;
-            border: 1px solid #ddd;
         }
 
         th, td {
+            border: 1px solid #dddddd;
             text-align: left;
-            padding: 16px;
+            padding: 8px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .topright {
+            position: absolute;
+            top: 8px;
+            right: 16px;
         }
 
         body, html {
@@ -79,7 +67,7 @@
             left: 15%;
             transform: translate(-50%, -50%);
             z-index: 2;
-            width: 25%;
+            width: 30%;
             padding: 30px;
             text-align: center;
         }
@@ -96,7 +84,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
-            width: 25%;
+            width: 40%;
             padding: 30px;
             text-align: center;
         }
@@ -113,14 +101,67 @@
             left: 85%;
             transform: translate(-50%, -50%);
             z-index: 2;
-            width: 25%;
+            width: 30%;
             padding: 30px;
             text-align: center;
         }
+
+        /* Position text in the middle of the page/image */
+        .bg-text3 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 35%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text4 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 35%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text5 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 70%;
+            padding: 30px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
     <div class="bg-image"></div>
+
     <script>
         function myFunctionGoBack() {
             location.replace("FrontPage.html")
@@ -130,29 +171,18 @@
     <table>
         <tbody class="bg-text">
             <tr>
-                <th>Company Name</th>
+                <th>Customer Name</th>
                 <th>Customer No.</th>
                 <th>VAT Registration No</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Menu</td>
+                <td>123454658</td>
+                <td>123456789</td>
             </tr>
     </table>
 
     <table>
-        <caption>Supplier Inoformation</caption>
         <tbody class="bg-text1">
             <tr>
                 <th>Company Name</th>
@@ -160,16 +190,56 @@
                 <th>EU Aut No</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Yang Ming</td>
+                <td>231564874</td>
+                <td>CN 30424 / 45784</td>
+            </tr>
+    </table>
+
+    <table>
+        <tbody class="bg-text2">
+            <tr>
+                <th>Process</th>
+                <th>Track-Trace</th>
+                <th>Order reference</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Order made, needs documents</td>
+                <td>Unavailable</td>
+                <td>1</td>
+            </tr>
+    </table>
+
+    <table>
+        <tbody class="bg-text3">
+            <tr>
+                <th>Product Number</th>
+                <th>Product description</th>
+                <th>Latin Name</th>
+                <th>Amount</th>
+                <th>Destination</th>
             </tr>
             <tr>
+                <td>MSC-424-SalmonMince</td>
+                <td>MSC Salmon Mince</td>
+                <td>Salmo salar</td>
+                <td>24.000KG.</td>
+                <td>Bremerhaven</td>
+            </tr>
+    </table>
+
+    <table>
+        <tbody class="bg-text4">
+            <tr>
+                <th>Notes</th>
+                <th>ETD</th>
+                <th>ATD</th>
+                <th>ETA</th>
+                <th>ATA</th>
+            </tr>
+            <tr>
+                <td>April is currntly making the drafts</td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -177,30 +247,30 @@
     </table>
 
     <table>
-        <caption>Process</caption>
-        <tbody class="bg-text2">
+        <tbody class="bg-text5">
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
+                <th>Documents</th>
             </tr>
             <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
             </tr>
             <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
+                <td>Bill Of Lading</td>
+                <td>United States attention of legal catch</td>
+                <td>Animal Health Certificate</td>
+                <td>Packing List</td>
+                <td>Certificate Of Origin</td>
+                <td>Statement Under Article 14 Of Council Regulation</td>
             </tr>
             <tr>
-                <td>Adam</td>
-                <td>Johnson</td>
-                <td>67</td>
+                <td><button onclick="myFunctionGoBack()">Go Back</button></td>
             </tr>
     </table>
 
-    <button onclick="myFunctionGoBack()">Go Back</button>
 </body>
 </html>

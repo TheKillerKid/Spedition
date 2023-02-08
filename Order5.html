@@ -1,17 +1,275 @@
 ﻿<!DOCTYPE html>
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Order 5</title>
+    <link rel="icon" type="image/x-icon" href="SeafoodSales_Brandmark.ico">
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .topright {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("Bagground_Image.png");
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 15%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 30%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text1 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 40%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text2 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 15%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 30%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text3 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 35%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text4 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 35%;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text5 {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 70%;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="bg-image"></div>
+
     <script>
         function myFunctionGoBack() {
             location.replace("FrontPage.html")
         }
     </script>
-    <h1>Order 5</h1>
-    <button onclick="myFunctionGoBack()">Go Back</button>
+
+    <table>
+        <tbody class="bg-text">
+            <tr>
+                <th>Customer Name</th>
+                <th>Customer No.</th>
+                <th>VAT Registration No</th>
+            </tr>
+            <tr>
+                <td>Seafood Sales - Lager</td>
+                <td>829761349</td>
+                <td>546987213</td>
+            </tr>
+    </table>
+
+    <table>
+        <tbody class="bg-text1">
+            <tr>
+                <th>Company Name</th>
+                <th>Supplier No.</th>
+                <th>EU Aut No</th>
+            </tr>
+            <tr>
+                <td>Ming Mai</td>
+                <td>564123478</td>
+                <td>CN 14785 / 56826</td>
+            </tr>
+    </table>
+
+    <table>
+        <tbody class="bg-text2">
+            <tr>
+                <th>Process</th>
+                <th>Track-Trace</th>
+                <th>Order reference</th>
+            </tr>
+            <tr>
+                <td>Shipped</td>
+                <td><button onclick="myFunctionGoBack()">Track</button></td>
+                <td>5</td>
+            </tr>
+    </table>
+
+    <table>
+        <tbody class="bg-text3">
+            <tr>
+                <th>Product Number</th>
+                <th>Product description</th>
+                <th>Latin Name</th>
+                <th>Amount</th>
+                <th>Destination</th>
+            </tr>
+            <tr>
+                <td>MSC-987</td>
+                <td>MSC Haddock Mince</td>
+                <td>Melanogrammus</td>
+                <td>40.000KG.</td>
+                <td>Padborg</td>
+            </tr>
+    </table>
+
+    <table>
+        <tbody class="bg-text4">
+            <tr>
+                <th>Notes</th>
+                <th>ETD</th>
+                <th>ATD</th>
+                <th>ETA</th>
+                <th>ATA</th>
+            </tr>
+            <tr>
+                <td>Shipped out, current ETA 16-03-2023</td>
+                <td>07-02-2023</td>
+                <td>08-02-2023</td>
+                <td>16-03-2023</td>
+                <td></td>
+            </tr>
+    </table>
+
+    <table>
+        <tbody class="bg-text5">
+            <tr>
+                <th>Documents</th>
+            </tr>
+            <tr>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+                <th><button onclick="myFunctionGoBack()">View</button></th>
+            </tr>
+            <tr>
+                <td>Bill Of Lading</td>
+                <td>United States attention of legal catch</td>
+                <td>Animal Health Certificate</td>
+                <td>Packing List</td>
+                <td>Certificate Of Origin</td>
+                <td>Statement Under Article 14 Of Council Regulation</td>
+            </tr>
+            <tr>
+                <td><button onclick="myFunctionGoBack()">Go Back</button></td>
+            </tr>
+    </table>
+
 </body>
 </html>
